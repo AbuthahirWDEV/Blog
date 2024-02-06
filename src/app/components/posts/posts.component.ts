@@ -29,8 +29,9 @@ export class PostsComponent implements OnInit {
   deletePost(post: any) {
     // we need to pass the id
     this.postService.deletePost(post.id).subscribe(() => {
-      this.posts = this.posts.filter( // need to understand this logic 
-        (p: any) => p.id != post.id 
+      this.posts = this.posts.filter(
+        // need to understand this logic
+        (p: any) => p.id != post.id
       );
     });
   }

@@ -1,12 +1,13 @@
 <main>
   <div class="bg-light py-5 text-center">
     <h1 class="roboto display-3 fw-bold">Blog</h1>
+    <a href="" [routerLink]="['/blog/create']" class="btn btn-dark mt-3">Add Post</a>
   </div>
   <div class="container mt-5">
     <div class="row">
       <div class="col-12 col-lg-8">
-          <!-- calling a post component  -->
-          <app-posts class="row" [colClass]="['col-lg-4']"></app-posts>
+        <!-- calling a post component  -->
+        <app-posts class="row" [colClass]="['col-lg-4']"></app-posts>
       </div>
       <div class="col-12 col-lg-4">
         <div class="bg-light rounded-3 p-3">

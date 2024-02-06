@@ -19,4 +19,8 @@ export class PostService {
     const url = `${this.apiUrl}/${id}`
     return this.http.delete<any>(url)
   }
+
+  createPost(post: any) : Observable<any>{
+    return this.http.post<any>(this.apiUrl,post)
+  }
 }
