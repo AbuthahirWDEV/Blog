@@ -1,0 +1,18 @@
+<!-- here we are retrieving components from mock-post.ts through structural directive called *ngFor -->
+
+<div
+  class="d-flex align-items-center justify-content-center mb-3"
+>
+  <div class="card" style="width: 18rem">
+    <img
+      src="https://source.unsplash.com/1280x720"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title fw-bold roboto">{{ cardPost.title }}</h5>
+      <p class="card-text">{{ cardPost.content }}</p>
+      <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+</div>
