@@ -1,3 +1,8 @@
-<app-post-comp *ngFor="let post of posts" class="col-12 {{colClass}}" [cardPost] = "post"></app-post-comp>
+<app-post-comp
+  *ngFor="let post of posts"
+  class="col-12 {{ colClass }}"
+  [cardPost]="post"
+  (onDeletePost)="deletePost(post)"
+></app-post-comp>
 
 <!-- now this is like parent component for post-comp we neeed to pass this data from here to there means parent to child  -->

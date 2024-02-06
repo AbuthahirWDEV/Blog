@@ -1,23 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-post-comp',
   templateUrl: './post-comp.component.html',
-  styleUrls: ['./post-comp.component.scss']
+  styleUrls: ['./post-comp.component.scss'],
 })
 export class PostCompComponent implements OnInit {
-  // now we need to accept the input comming from posts comp which is cardPost 
+  // now we need to accept the input comming from posts comp which is cardPost
   // receving value from parent posts.ts
-  @Input() cardPost : any
-  
-  constructor(private postService : PostService){}
-  ngOnInit(): void {
-    
-  }
+  @Input() cardPost: any;
 
-  onDelete(){
-    // we need to pass the id 
-    this.postService.deletePost(this.cardPost.id).subscribe()
+  @Output() onDeletePost: EventEmitter<any> = new EventEmitter();
+
+  constructor(private postService: PostService) {}
+  ngOnInit(): void {}
+
+  onDelete() {
+    this.onDeletePost.emit();
   }
 }
