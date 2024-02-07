@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostCompComponent } from './components/post-comp/post-comp.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ PostsComponent,
     PostCompComponent,
     PostsComponent,
     AddPostComponent,
+    EditPostComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule , FormsModule],
   providers: [],

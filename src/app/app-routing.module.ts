@@ -4,6 +4,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
     path: 'blog/create',
     component: AddPostComponent
   },
+  {
+    path: 'blog/edit/:id',
+    component: EditPostComponent
+  }
 ];
 
 @NgModule({

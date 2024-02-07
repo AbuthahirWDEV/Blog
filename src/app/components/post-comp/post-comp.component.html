@@ -12,6 +12,7 @@
     <div class="card-body">
       <h5 class="card-title fw-bold roboto">{{ cardPost.title }}</h5>
       <p class="card-text">{{ cardPost.content }}</p>
+      <a href="" [routerLink]="['/blog/edit',cardPost.id]" class="btn btn-dark me-3">Edit</a>
       <button class="btn btn-danger" (click)="onDelete()">Delete</button>
     </div>
   </div>

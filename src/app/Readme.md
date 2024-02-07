@@ -30,10 +30,40 @@ so we create one of the data binding called property binding of [colClass]
 now we need to receive this from from both blog and home in posts,ts through @input
 
 
-//JSON Server and delete implemntation 
+// JSON Server and delete implemntation 
 
 instead of mock data.ts we download package called json Server
 created a Service folder with Post service 
 using concepts like Observable , HttpClient 
 in posts.ts imported Postservice and make that to send data to cards
 in post-comp writed function for delete using Postservice 
+
+// Create Post 
+in blog page i add post button 
+created a new component called add-post 
+in that component used two way binding for form component and uses attribute directives called ngModel
+and in services i created createPost api for POST 
+
+// Update POST 
+in post-comp blog crads i added one more button called edit 
+created a new component called edit-post
+in that component used two way binding for form component and uses attribute directives called ngModel
+and in services i created 2 services called editPost , getEditPost for put and get 
+and in route i added dynamic id to get the value from route 
+in post-comp i added this also in route for edit [routerLink]="['/blog/edit',cardPost.id]"
+in edit-post component get the data 1st and updating 
+
+
+// Concepts in used in whole projects and learned 
+Data binding - interpolation , property binding , event binding , two way binding .
+Structural directives - ngFor
+Attribute directives - ngModel
+Decorators - Input , Output , Injectable 
+Lifecycle hook - onInit
+Router 
+Api services - CRUD Operation
+Emitter 
+Asynchronous - Observable , Subscribe 
+
+
+
